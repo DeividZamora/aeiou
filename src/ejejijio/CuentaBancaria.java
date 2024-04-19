@@ -9,16 +9,25 @@ public class CuentaBancaria
 	
 	public void ConsultarSaldo() 
 	{
-		System.out.println(saldo);
+		System.out.println("Su saldo es de "+saldo);
 		
 	}
 	public double Retirar(double monto)
 	{
 		saldo=saldo-monto;
-		return saldo;}
-	public double Depositar(double monto) {return monto;}
+		return saldo;
+	}
+	public double Depositar(double monto) 
+	{
+		saldo= saldo+monto;
+		return saldo;
+		
+	}
+	
 	
 	//Getters y stters-----------------
+	
+	
 	public String getNumeroCuenta() {
 		return numeroCuenta;
 	}
