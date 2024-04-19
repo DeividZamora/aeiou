@@ -1,10 +1,15 @@
 package ejejijio;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class CuentaBancaria 
 
 {
 	protected String numeroCuenta;
 	protected double saldo;
+	
+	ArrayList <Cliente> Usuarios = new ArrayList<Cliente>();
 	
 	public CuentaBancaria(String numeroCuenta, double saldo) {
 		super();
@@ -24,17 +29,18 @@ public class CuentaBancaria
 		System.out.println("Su saldo es de "+saldo);
 		
 	}
-	public double Retirar(double monto)
+	public void Retirar()
 	{
-		saldo=saldo-monto;
-		return saldo;
+		Scanner leer = new Scanner(System.in);
+
+			
 	}
-	public double Depositar(double monto) 
-	{
-		saldo= saldo+monto;
-		return saldo;
+	
+
 		
-	}
+	
+		
+	
 	
 	
 	//Getters y stters-----------------

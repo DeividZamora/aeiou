@@ -14,14 +14,19 @@ public class Aplication {
 		Cajero cajero1 = new Cajero();
 	//--------------------------------	
 		
-		
-		
-		
-		cliente1.IngresarTarjeta();
-		cliente1.IngresarClave();
+		System.out.println("Ingrese un nuevo usuario");
+		cliente1.Regristrar();
 		
 		for (int a=1;a==1;)
 		{
+			
+			
+			
+			
+		
+		
+		
+		
 		
 			System.out.println("¿Qué acción desea hacer?");
 			System.out.println("1.Consultar saldo.");
@@ -34,12 +39,17 @@ public class Aplication {
 			
 			{
 			case 1: banco1.ConsultarSaldo(); break;
-			case 2: System.out.println("Digite la cantidad de dinero que quiere retirar")
-			;banco1.Retirar(leer.nextDouble()); break;
+			
+			case 2: cliente1.buscar(a); break;
+			
 			case 3: System.out.println("Digite la cantidad de dinero que quiere depositar")
-			;banco1.Depositar(leer.nextDouble()); break;
+			;cliente1.Depositar(cliente1.getClave(),leer.nextDouble()); break;
+			
+			
 			case 4: a=2; break;
 			default: System.out.println("Valor inválido");
+			
+			case 5: cliente1.mostrar();
 			}
 		}
 	}

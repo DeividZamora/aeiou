@@ -14,10 +14,9 @@ public class Cliente extends CuentaBancaria {
 	{}
 	
 	
-	
 	Scanner leer = new Scanner(System.in);
 	
-	ArrayList <Cliente> Usuarios = new ArrayList<Cliente>();
+	
 
 	
 	public void Regristrar()
@@ -41,12 +40,44 @@ public class Cliente extends CuentaBancaria {
 
 	        System.out.print("Ingrese su clave: ");
 	        objper.setClave(leer.nextInt());
+	        
+	        System.out.print("Ingrese su id: ");
+	        objper.setId(leer.nextInt());
+	        
 
 	        Usuarios.add(objper);
-	        System.out.println("Persona agregada correctamente.");
+	        System.out.println("Usuario creado correctamente.");
+	        for(int i=0; i < Usuarios.size(); i++)
+	    	{
+	    		System.out.println(Usuarios.get(i)); 		
+	    	}
 	    }
 	}
 	
+	@Override
+	public String toString() {
+		return "Cliente [id=" + id + ", clave=" + clave + ", Saldo= "+saldo +"]";
+		
+	}
+	public void Depositar(int clave,double monto) 
+	{   Scanner leer = new Scanner(System.in);
+	
+		for (Cliente cliente : Usuarios) {
+		cliente.clave=clave;
+				if (cliente.getClave()==clave)
+				{	
+					cliente.setSaldo(cliente.getSaldo()+monto); 
+					
+					System.out.println("saldo modificdo a: "+cliente.getSaldo());
+				}
+			}}	
+
+	public void mostrar()
+	{for(int i=0; i < Usuarios.size(); i++)
+	{
+		System.out.println(Usuarios.get(i)); 		
+	}}
+
 	public void IngresarTarjeta() 
 	{
 		System.out.println("Ingrese su clave");	
@@ -56,6 +87,25 @@ public class Cliente extends CuentaBancaria {
 	public void IngresarClave() 
 	{	
 	clave= leer.nextInt();
+	}
+	
+	public void buscar(int clave)
+	{
+		System.out.println("Introduzca el ID de la persona que busca");
+		Scanner leer = new Scanner(System.in);
+		clave = leer.nextInt();
+	    for (Cliente persona : Usuarios) {
+	        if (persona.getClave()==clave) {
+	            System.out.println("Persona encontrada:");
+	            System.out.println("Identificación: " + persona.getId());
+	            System.out.println("Nombre: " + persona.getSaldo());
+	          
+	            
+	            
+	            System.out.println("Presione cualquier tecla para continuar");
+	        	String a = leer.next();
+	        }}
+		
 	}
 	
 	
@@ -78,13 +128,6 @@ public class Cliente extends CuentaBancaria {
 		this.clave = clave;
 	}
 
-	public Scanner getLeer() {
-		return leer;
-	}
-
-	public void setLeer(Scanner leer) {
-		this.leer = leer;
-	}
 
 
 	}
