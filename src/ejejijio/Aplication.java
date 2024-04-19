@@ -30,10 +30,11 @@ public class Aplication {
 			
 			{
 			case 1: banco1.ConsultarSaldo(); break;
-			
+			case 2: System.out.println("Digite la cantidad de dinero que quiere retirar");;banco1.Retirar(leer.nextDouble()); break;
 			default: 
 			}
-			
+		System.out.println("Digite 1 para volver a empezar");
+		selec=leer.nextInt();	
 		}
 		while(selec==1);
 	}

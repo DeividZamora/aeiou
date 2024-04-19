@@ -12,7 +12,10 @@ public class CuentaBancaria
 		System.out.println(saldo);
 		
 	}
-	public double Retirar(double monto) {return monto;}
+	public double Retirar(double monto)
+	{
+		saldo=saldo-monto;
+		return saldo;}
 	public double Depositar(double monto) {return monto;}
 	
 	//Getters y stters-----------------
