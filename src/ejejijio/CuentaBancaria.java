@@ -6,6 +6,18 @@ public class CuentaBancaria
 	protected String numeroCuenta;
 	protected double saldo;
 	
+	public CuentaBancaria(String numeroCuenta, double saldo) {
+		super();
+		this.numeroCuenta = numeroCuenta;
+		this.saldo = saldo;
+		
+	}
+	
+	public CuentaBancaria()
+	{
+		
+		
+	}
 	
 	public void ConsultarSaldo() 
 	{
@@ -26,7 +38,6 @@ public class CuentaBancaria
 	
 	
 	//Getters y stters-----------------
-	
 	
 	public String getNumeroCuenta() {
 		return numeroCuenta;
