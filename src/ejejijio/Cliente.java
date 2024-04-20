@@ -203,10 +203,9 @@ public class Cliente extends CuentaBancaria {
 					
 					System.out.println("Transferencia hecha con exito");
 				}
-				
-				
 			}
-		for (Cliente cliente : Usuarios) {
+		for (Cliente cliente : Usuarios)
+		{
 			
 			if (cliente.getClave()==clave)
 			{	
@@ -215,7 +214,7 @@ public class Cliente extends CuentaBancaria {
 				System.out.println("Su saldo es de: "+cliente.getSaldo());
 			}
 		}
-		}
+	}
 	
 
 	//Getters y setters---------	
