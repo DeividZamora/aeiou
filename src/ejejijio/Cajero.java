@@ -8,7 +8,7 @@ protected int idCajero;
 
 public void OperarCajero() {}
 
-public void prueba() {System.out.println("Texto prueba jeje");}
+public void prueba() {}
 
 //Getters y setters----------
 public int getIdCajero() {

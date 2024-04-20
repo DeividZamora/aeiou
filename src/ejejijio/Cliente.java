@@ -14,7 +14,7 @@ public class Cliente extends CuentaBancaria {
 	
 //Metodo para registrar usuario-----------------------------------------	
 
-	public void Regristrar()
+	public void Regristrar(int id)
 	{
 		Scanner leer = new Scanner(System.in);
 		 
@@ -23,7 +23,7 @@ public class Cliente extends CuentaBancaria {
 	    // Verificar si la identificación ya existe en la lista
 	    boolean existe = false;
 	    for (Cliente persona : Usuarios) {
-	        if (persona.getId()==objper.id) {
+	        if (persona.getId()==id) {
 	            System.out.println("La identificación ya existe.");
 	            existe = true;
 	            break;
@@ -33,8 +33,8 @@ public class Cliente extends CuentaBancaria {
 	    if (!existe) {
 	        objper.setId(id);
 	        
-	        System.out.print("Ingrese su id: ");
-	        objper.setId(leer.nextInt());
+	        
+	        objper.setId(id);
 
 	        System.out.print("Ingrese su clave: ");
 	        objper.setClave(leer.nextInt());

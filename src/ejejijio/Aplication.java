@@ -18,7 +18,8 @@ public class Aplication {
 		byte opc;
 		System.out.println("Ningun usuario registrado en el banco");
 		System.out.println("Registre usuario");
-		cliente1.Regristrar();
+		System.out.print("Ingrese su id: ");
+		cliente1.Regristrar(leer.nextInt());
 		for(int i=1;i==1;) 
 		{
 		System.out.println("¿Que desea hecer?");
@@ -28,7 +29,8 @@ public class Aplication {
 		opc=leer.nextByte();
 		switch(opc) 
 		{
-		case 1: cliente1.Regristrar(); break;
+		case 1: System.out.print("Ingrese su id: ");
+		cliente1.Regristrar(leer.nextInt()); break;
 		case 2: cliente1.IngresarTarjeta();
 		;tarjeta1.ValidarTarjeta();
 		;System.out.println("Ingrese su clave"); 
