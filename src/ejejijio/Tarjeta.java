@@ -6,7 +6,10 @@ public class Tarjeta
 protected String numeroTarjeta;
 protected String tipoTarjeta;
 
-public void ValidarTarjeta() {}
+public void ValidarTarjeta() 
+{
+System.out.println("Tarjeta validada correctameente");	
+}
 
 //Getters y setters--------------
 

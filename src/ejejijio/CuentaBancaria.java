@@ -1,5 +1,5 @@
 package ejejijio;
-
+import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -24,24 +24,20 @@ public class CuentaBancaria
 		
 	}
 	
-	public void ConsultarSaldo() 
-	{
-		System.out.println("Su saldo es de "+saldo);
+	
+	public void Retirar(int clave,double monto) 
+	{   Scanner leer = new Scanner(System.in);
+	
+		for (Cliente cliente : Usuarios) {
 		
-	}
-	public void Retirar()
-	{
-		Scanner leer = new Scanner(System.in);
+				if (cliente.getClave()==clave)
+				{	
+					cliente.setSaldo(cliente.getSaldo()-monto); 
+					
+					System.out.println("saldo modificdo a: "+cliente.getSaldo());
+				}
+			}}
 
-			
-	}
-	
-
-		
-	
-		
-	
-	
 	
 	//Getters y stters-----------------
 	
