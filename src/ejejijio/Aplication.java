@@ -16,8 +16,6 @@ public class Aplication {
 		ArchivoManager prueba = new ArchivoManager();
 	//--------------------------------	
 		byte opc;
-		
-		
 		System.out.println("Ningun usuario registrado en el banco");
 		System.out.println("Registre usuario");
 		cliente1.Regristrar();
