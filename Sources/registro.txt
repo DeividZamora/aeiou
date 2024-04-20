@@ -1,0 +1,3 @@
+
+---------Nuevos Movimientos Registrados En El Banco---------
+Cliente [id=1, clave=1, Saldo= 0.0]

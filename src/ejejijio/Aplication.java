@@ -2,6 +2,7 @@ package ejejijio;
 
 import java.util.Scanner;
 
+
 public class Aplication {
 
 	public static void main(String[] args) {
@@ -12,8 +13,11 @@ public class Aplication {
 		Tarjeta tarjeta1 = new Tarjeta();
 		CuentaBancaria banco1 = new CuentaBancaria();
 		Cajero cajero1 = new Cajero();
+		ArchivoManager prueba = new ArchivoManager();
 	//--------------------------------	
 		byte opc;
+		
+		
 		System.out.println("Ningun usuario registrado en el banco");
 		System.out.println("Registre usuario");
 		cliente1.Regristrar();
@@ -39,7 +43,7 @@ public class Aplication {
 		default: System.out.println("opcion no valida");
 		}
 		}
-	
+		prueba.guardarArrayListEnArchivo(cliente1.Usuarios);
 		}
 	}
 

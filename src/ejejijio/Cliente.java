@@ -45,6 +45,8 @@ public class Cliente extends CuentaBancaria {
 	    }
 	}
 	
+	
+	
 //Metodo to string------------------------------------------------------------
 	
 	@Override
@@ -167,7 +169,7 @@ public class Cliente extends CuentaBancaria {
 			
 			case 6: mostrar(); break;
 			
-			case 7: buscar(a); break;
+			case 7: buscar(clave); break;
 			
 			default: System.out.println("Valor inválido");
 			}}
