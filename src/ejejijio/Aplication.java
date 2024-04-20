@@ -21,7 +21,7 @@ public class Aplication {
 		{
 		System.out.println("¿Que desea hecer?");
 		System.out.println("Presione 1 para registrar nuevo usuario en banco");
-		System.out.println("Presione 2 entrar al cajero");
+		System.out.println("Presione 2 para entrar al cajero");
 		System.out.println("Presione 3 para salir del banco");
 		opc=leer.nextByte();
 		switch(opc) 

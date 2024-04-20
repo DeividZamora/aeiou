@@ -41,10 +41,7 @@ public class Cliente extends CuentaBancaria {
 	        
 	        Usuarios.add(objper);
 	        System.out.println("Usuario creado correctamente.");
-	        for(int i=0; i < Usuarios.size(); i++)
-	    	{
-	    		System.out.println(Usuarios.get(i)); 		
-	    	}
+	       
 	    }
 	}
 	
@@ -162,7 +159,7 @@ public class Cliente extends CuentaBancaria {
 			
 			case 3: System.out.println("Digite la cantidad de dinero que quiere depositar");Depositar(clave,leer.nextDouble()); break;
 			
-			case 4: break;
+			case 4: System.out.println("Escriba el id de la persona a la que quiere depositar");Trans(leer.nextInt(), 0.0, clave);break;
 			
 			case 5: a=2; break;
 			
@@ -183,7 +180,6 @@ public class Cliente extends CuentaBancaria {
 	{   Scanner leer = new Scanner(System.in);
 	
 		for (Cliente cliente : Usuarios) {
-		clave=cliente.clave;
 				if (cliente.getClave()==clave)
 				{	
 					cliente.setSaldo(cliente.getSaldo()+monto); 
@@ -191,6 +187,35 @@ public class Cliente extends CuentaBancaria {
 					System.out.println("El saldo es de "+cliente.getSaldo());
 				}
 			}}
+	
+	//Metodo para depositar en otros usuarios---------------
+	
+	public void Trans(int id,double monto, int clave) 
+	{   Scanner leer = new Scanner(System.in);
+		System.out.println("Escriba el monto que quiere transferir");
+		monto = leer.nextDouble();
+		for (Cliente cliente : Usuarios) 
+	{
+		
+				if (cliente.getId()==id)
+				{	
+					cliente.setSaldo(cliente.getSaldo()+monto); 
+					
+					System.out.println("Transferencia hecha con exito");
+				}
+				
+				
+			}
+		for (Cliente cliente : Usuarios) {
+			
+			if (cliente.getClave()==clave)
+			{	
+				cliente.setSaldo(cliente.getSaldo()-monto); 
+				
+				System.out.println("Su saldo es de: "+cliente.getSaldo());
+			}
+		}
+		}
 	
 
 	//Getters y setters---------	
