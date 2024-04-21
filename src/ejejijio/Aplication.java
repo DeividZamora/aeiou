@@ -1,8 +1,5 @@
 package ejejijio;
-
 import java.util.Scanner;
-
-
 public class Aplication {
 
 	public static void main(String[] args) {
@@ -15,11 +12,9 @@ public class Aplication {
 		Cajero cajero1 = new Cajero();
 		ArchivoManager prueba = new ArchivoManager();
 	//--------------------------------	
+		banco1.Usuarios = banco1.cargarArrayListDesdeArchivo();
+
 		byte opc;
-		System.out.println("Ningun usuario registrado en el banco");
-		System.out.println("Registre usuario");
-		System.out.print("Ingrese su id: ");
-		cliente1.Regristrar(leer.nextInt());
 		for(int i=1;i==1;) 
 		{
 		System.out.println("¿Que desea hecer?");
@@ -46,5 +41,3 @@ public class Aplication {
 		prueba.guardarArrayListEnArchivo(cliente1.Usuarios);
 		}
 	}
-
-

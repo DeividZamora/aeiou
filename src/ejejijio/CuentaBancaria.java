@@ -1,7 +1,8 @@
 package ejejijio;
 import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class CuentaBancaria 
 
@@ -9,7 +10,32 @@ public class CuentaBancaria
 	protected String numeroCuenta;
 	protected double saldo;
 	
-	ArrayList <Cliente> Usuarios = new ArrayList<Cliente>();
+	public static ArrayList <Cliente> Usuarios = new ArrayList<Cliente>();
+	
+	  public static ArrayList <Cliente> cargarArrayListDesdeArchivo() {
+	        String nombreArchivo = "registro.txt";
+	        String rutaDirectorio = "C:\\Users\\johan\\eclipse-workspace\\cajero\\Sources";
+	        
+
+	        try (BufferedReader reader = new BufferedReader(new FileReader(rutaDirectorio + "/" + nombreArchivo))) {
+	            String linea;
+	            while ((linea = reader.readLine()) != null) {
+	                // Parsear la línea para obtener los atributos enteros
+	                String[] partes = linea.split(",");
+	                int id = Integer.parseInt(partes[0]);
+	                int clave = Integer.parseInt(partes[1]);
+	                double saldo = Double.parseDouble(partes[2]);
+	                // Crear un objeto y agregarlo a la lista
+	                Usuarios.add(new Cliente(id, clave,saldo));
+	            }
+	            System.out.println("Usuarios cargados correctamente desde el archivo " + nombreArchivo);
+	        } catch (Exception e) {
+	            System.err.println("Error al cargar desde el archivo: " + e.getMessage());
+	        }
+
+	        return Usuarios;
+	    }
+	
 	
 	public CuentaBancaria(String numeroCuenta, double saldo) {
 		super();

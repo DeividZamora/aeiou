@@ -10,6 +10,14 @@ public class Cliente extends CuentaBancaria {
 		this.clave=clave;
 	}
 	public Cliente(){}
+	
+	public Cliente(int id, int clave, double saldo) {
+		
+		this.id = id;
+		this.clave = clave;
+		this.saldo=saldo;
+	}
+	
 	Scanner leer = new Scanner(System.in);
 	
 //Metodo para registrar usuario-----------------------------------------	
@@ -51,7 +59,7 @@ public class Cliente extends CuentaBancaria {
 	
 	@Override
 	public String toString() {
-		return "Cliente [id=" + id + ", clave=" + clave + ", Saldo= "+saldo +"]";
+		return id + "," + clave + ","+saldo;
 		
 	}
 	
@@ -139,7 +147,7 @@ public class Cliente extends CuentaBancaria {
 	}
 	
 //Metodo para seleccionar que operacion se va a hacer en el cajero
-	
+	ArchivoManager prueba = new ArchivoManager();
 	public void SeleccionarOperacion(int clave) 
 	{
 		for (int a=1;a==1;)
@@ -157,11 +165,14 @@ public class Cliente extends CuentaBancaria {
 			{
 			case 1: ConsultarSaldo(clave, 0.0); break;
 			
-			case 2: System.out.println("Digite la cantidad de dinero que quiere retirar");Retirar(clave, leer.nextDouble()); break;
+			case 2: System.out.println("Digite la cantidad de dinero que quiere retirar");Retirar(clave, leer.nextDouble());
+			prueba.guardarTransacciones(Usuarios);break;
 			
-			case 3: System.out.println("Digite la cantidad de dinero que quiere depositar");Depositar(clave,leer.nextDouble()); break;
+			case 3: System.out.println("Digite la cantidad de dinero que quiere depositar");Depositar(clave,leer.nextDouble()); 
+			prueba.guardarTransacciones(Usuarios);break;
 			
-			case 4: System.out.println("Escriba el id de la persona a la que quiere depositar");Trans(leer.nextInt(), 0.0, clave);break;
+			case 4: System.out.println("Escriba el id de la persona a la que quiere depositar");Trans(leer.nextInt(), 0.0, clave);
+			prueba.guardarTransacciones(Usuarios);break;
 			
 			case 5: a=2; break;
 			

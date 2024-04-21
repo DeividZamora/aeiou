@@ -1,8 +1,3 @@
-
----------Nuevos Movimientos Registrados En El Banco---------
-Cliente [id=1, clave=1, Saldo= 0.0]
-
----------Nuevos Movimientos Registrados En El Banco---------
-Cliente [id=1, clave=1, Saldo= 100.0]
-Cliente [id=2, clave=2, Saldo= 1000.0]
-Cliente [id=3, clave=3, Saldo= 100.0]
+1,1,1000.0
+1011099653,2856,60000.0
+2,2,100.0
